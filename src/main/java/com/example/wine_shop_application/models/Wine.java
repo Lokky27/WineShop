@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.wine_shop_application.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
