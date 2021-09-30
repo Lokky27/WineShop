@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -24,7 +25,16 @@ public class Wine
     @Column(name = "producer")
     private String producer;
 
-    @Column(name = "price")
-    private Double price;
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
+    private Type type;
+
+    @Column(name = "color")
+    @Enumerated(EnumType.STRING)
+    private Color color;
+
+    @Column(name = "harvest_date")
+    private LocalDate harvestDate;
+
 
 }
